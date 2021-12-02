@@ -46,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Text(error),
             ),
             actions: [
-              FlatButton(
+              TextButton(
                 child: Text("Close Dialog"),
                 onPressed: () {
                   Navigator.pop(context);
@@ -105,6 +105,16 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               LoginHead(),
+              // Container(
+              //   child: ClipRRect(
+              //     borderRadius: BorderRadius.circular(50.0),
+              //     child: Image(image: AssetImage("assets/icon.png"),
+              //     fit: BoxFit.cover,
+              //       height: 110.0,
+              //       width: 130.0,
+              //     ),
+              //   ),
+              // ),
               Column(
                 children: [
                   CustomInput(
@@ -128,6 +138,7 @@ class _LoginPageState extends State<LoginPage> {
                       isPasswordField: true),
                   CustomButtom(text: "Login" ,
                       onloading: _loginFormLoading,
+                      onSmit: true,
                       onPressed: (){
                     _submitForm();
                   }),
@@ -135,6 +146,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               CustomButtom(text: "Create new account",
                   onloading: false,
+                  onSmit: false,
                   onPressed: (){
                     Navigator.push(
                       context,

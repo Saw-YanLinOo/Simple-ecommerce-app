@@ -24,7 +24,7 @@ class _RegisterPageState extends State<RegisterPage> {
               child: Text(error),
             ),
             actions: [
-              FlatButton(
+              TextButton(
                 child: Text("Close Dialog"),
                 onPressed: () {
                   Navigator.pop(context);
@@ -143,6 +143,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                   CustomButtom(
                     text: "Create New Account",
+                    onSmit: true,
                     onPressed: () {
                       _submitForm();
                     },
@@ -156,6 +157,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 child: CustomButtom(
                   text: "Back To Login",
+                  onSmit: false,
                   onPressed: () {
                     Navigator.pop(context);
                   }, onloading: false,

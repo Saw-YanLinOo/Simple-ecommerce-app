@@ -4,8 +4,8 @@ class CustomButtom extends StatelessWidget {
   final String text;
   final Function onPressed;
   final bool onloading;
-
-  CustomButtom({required this.text,required this.onPressed,required this.onloading});
+  final bool onSmit;
+  CustomButtom({required this.text,required this.onPressed,required this.onloading,required this.onSmit});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class CustomButtom extends StatelessWidget {
                   child: Text(text,
                     style: TextStyle(
                       fontSize: 16.0,
-                      color: true ? Colors.black : Colors.white,
+                      color: onSmit ? Colors.black : Colors.white,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -50,7 +50,7 @@ class CustomButtom extends StatelessWidget {
             vertical: 8.0,
           ),
           decoration: BoxDecoration(
-            color: true ? Colors.transparent : Colors.black,
+            color: onSmit ? Colors.transparent : Colors.black,
             border: Border.all(
               color: Colors.black,
               width: 2.0,

@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class ButtomTabs extends StatefulWidget {
@@ -64,7 +65,7 @@ class _ButtomTabsState extends State<ButtomTabs> {
             imagePath: "assets/tab_logout.png",
             selected: selected == 3 ? true : false,
             onPressed:(){
-              print("logout....");
+              FirebaseAuth.instance.signOut();
             },
           ),
         ],
@@ -95,7 +96,7 @@ class ButtomTabBtn extends StatelessWidget {
         decoration: BoxDecoration(
             border: Border(
                 top: BorderSide(
-                  color: _selected ? Theme.of(context).accentColor : Colors.transparent,
+                  color: _selected ? Theme.of(context).backgroundColor : Colors.transparent,
                   width: 2.0,
                 )
             )
@@ -106,7 +107,7 @@ class ButtomTabBtn extends StatelessWidget {
           ),
           width: 22.0,
           height: 22.0,
-          color: _selected ? Theme.of(context).accentColor : Colors.black,
+          color: _selected ? Theme.of(context).backgroundColor : Colors.black,
         ),
       ),
     );

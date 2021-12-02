@@ -1,5 +1,3 @@
-
-import 'package:ecommerceapp/constants.dart';
 import 'package:ecommerceapp/screens/home_page.dart';
 import 'package:ecommerceapp/screens/login_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -61,23 +59,17 @@ class _LandingPageState extends State<LandingPage> {
                   return HomePage();
                 }
               }
-
               //Checking the user auth state - loading
               return Scaffold(
-                body: Center(
-                  child: Text("Checking Authentication"),
-                ),
+                body: Center(child: CircularProgressIndicator()),
               );
             },
 
           );
         }
-
         //Firebase app is loading
         return Scaffold(
-          body: Center(
-            child: Text("Initialization App"),
-          ),
+          body: Center(child: CircularProgressIndicator()),
         );
       },
 
