@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ecommerceapp/constants.dart';
 import 'package:ecommerceapp/screens/product_page.dart';
 import 'package:ecommerceapp/widgets/custom_action_bar.dart';
 import 'package:ecommerceapp/widgets/product_cart.dart';
